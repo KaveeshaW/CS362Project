@@ -1,5 +1,5 @@
 // Arduino 3 (K)
-// Button, Buzzer, Ultrasonic Sensor, LEDs
+// Buttons, Buzzer, Ultrasonic Sensor, LEDs
 
 //there is only one real button in the safe that works, the other two buttons are dummies. the real button pin is 11
 const byte realButton = 11; 
