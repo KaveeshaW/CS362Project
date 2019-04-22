@@ -20,4 +20,4 @@ List of References
 -IR Receiver Remote: 1. https://www.instructables.com/id/Arduino-Infrared-Remote-tutorial/
                      2. https://www.sunfounder.com/learn/From-Knowing-To-Utilizing-Kit-V1-0-for-Arduino/lesson-21-infrared-receiver-starter-basic-kit-v1-0-for-arduino.html
                      
--Ultrasonic sensor: 1. https://howtomechatronics.com/tutorials/arduino/ultrasonic-sensor-hc-sr04/
+-Ultrasonic sensor: https://howtomechatronics.com/tutorials/arduino/ultrasonic-sensor-hc-sr04/
