@@ -24,6 +24,8 @@ int buttonState;
 long duration;
 int distance;
 
+//*********************************************************************************
+//setup()
 void setup() {
 
   // Sets the trigPin as an Output
@@ -55,6 +57,8 @@ void setup() {
   //makes sure the buzzer is off before the program starts, that is the second arduino send 'B' or begin to this arduino
   noTone(buzzer);
 }
+//end setup()
+//*********************************************************************************
 
 //*********************************************************************************
 //loop()
