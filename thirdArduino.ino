@@ -1,3 +1,18 @@
+//Team Number: 3
+
+//Names and NetIDs:
+
+//Adrian Zavala azaval9
+//Cecilia Avila cavila21
+//Kaveesha Weerasiri kweera2
+
+//Title: The Unbreakable Safe
+
+//Abstract:
+//We are creating a safe that has a two level security system. The first level is a password of 4 digits. 
+//Once access is granted, the second level security is a hidden button that only the owner of the safe has knowledge of.
+//If the button is not pressed within a certain time limit, the safe will display a message that law enforcement has been notified.
+
 // Arduino 3 (K)
 // Buttons, Buzzer, Ultrasonic Sensor, LEDs
 
