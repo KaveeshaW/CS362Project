@@ -1,11 +1,21 @@
-/***********************************************
-* name:Infrared-Receiver
-* function:press the Power key of a remote control,
-* and both the LED attached and that connected to pin 13 on the SunFounder Uno board will light up.
-* Then press any other key, and the LEDs will go out.
-**********************************************/
-//Email: support@sunfounder.com
-//Website: www.sunfounder.com
+/* 
+ * Team Number: 3 
+ * Group Members(NetID): Cecilia Avila(cavila21), Adrian Zavala(azaval9), Kaveesha Weerasiri(kweera2)
+ *
+ * Project Name: The Unbreakable Safe
+ *
+ * Abstract: We are creating a safe that has a two level security system. 
+ *           The first level is a password of 4 digits. Once access is granted, 
+ *           the second level security is a hidden button that only the owner of 
+ *           the safe has knowledge of. If the button is not pressed within a 
+ *           certain time limit, the safe will display a message that law enforcement 
+ *           has been notified.
+ *           
+ *  References: Buzzer: https://create.arduino.cc/projecthub/SURYATEJA/use-a-buzzer-module-piezo-speaker-using-arduino-uno-89df45 
+ *              IR Receiver Remote: 1.https://www.instructables.com/id/Arduino-Infrared-Remote-tutorial/
+ *                                  2.https://www.sunfounder.com/learn/From-Knowing-To-Utilizing-Kit-V1-0-for-Arduino/lesson-21-infrared-receiver-starter-basic-kit-v1-0-for-arduino.html
+ *              Liquid Crystal Display: https://www.arduino.cc/en/Tutorial/LiquidCrystalScroll  
+ */
 
 #include <NewTone.h>
 #include <IRremote.h> 
@@ -24,6 +34,7 @@ decode_results results;
 int myArray[MY_SIZE];
 int i = 0;
 
+//clear the password array
 void clearArr(int myArray[]) {
   for(int j = 0; j < i ; j++){
      myArray[j] = 0;
@@ -36,6 +47,7 @@ void buzzerSound( int x){
   noNewTone(buzzer);
 }
 
+//function that makes the buzzer beep 3 times
 void buzzerRepeat(){
   int i = 0;
   for(i = 0; i < 3; i++){
@@ -44,8 +56,6 @@ void buzzerRepeat(){
     noNewTone(buzzer);
     delay(200);
   }
-  
-  
 }
 
 void setup()
@@ -61,13 +71,8 @@ void loop()
 {
   if (irrecv.decode(&results)) //if the ir receiver module receiver data
   { 
-//    Serial.print("irCode: "); //print"irCode: " 
-//    Serial.print(results.value, HEX); //print the value in hexdecimal 
-//    Serial.print(", bits: "); //print" , bits: " 
-//    Serial.println(results.bits); //print the bits
-    
     delay(600);
-
+    
      //Each statement checks the value of the ir receiver and stores it in the array
     if(results.value == 0xFF6897){
       if(i < 4) {
@@ -154,7 +159,7 @@ void loop()
          lcd.print("Access Granted!");
          buzzerRepeat();
          
-         //TODO SEND YES TO NEXT ARDUINO
+         //SEND YES TO NEXT ARDUINO
          Serial.write('O');
          clearArr(myArray);
          delay(3000);
