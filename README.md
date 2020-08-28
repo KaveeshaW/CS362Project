@@ -1,4 +1,6 @@
 # CS362Project
+Video: https://www.youtube.com/watch?v=fXRv_W06U_0
+
 Group project Spring2019
 
 List of References
